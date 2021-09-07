@@ -1,31 +1,41 @@
 module Util
     module Import
-      def self.import_class
+      def self.import_class(report)
+        
         classes = Dir.glob("#{Rails.root}/db/csv/*.csv").map{ |s| File.basename(s, File.extname(s)) }
         cl = 'PatientRecord'.constantize
-        puts "Import Started"
+        a = 0
+        report.write("#{Time.now} Import for file started...\n")
         classes.each do |c|
-          csv_text = File.read(Rails.root.join('db', 'csv', "patient_records.csv"))
-          csv = CSV.parse(csv_text.scrub, headers: true)
-          csv.each do |row|
-            rec = cl.find_or_initialize_by(id: row['id'])
-            rec.id = nil unless rec.persisted?
-            rec.last_name = row['last_name'].strip
-            rec.first_name = row['first_name'].strip
-            rec.dob = reformat_date(row['dob'])
-            # rec.dob = row['dob']
-            rec.member_id = row['member_id'].strip
-            rec.effective_date = row['effective_date']
-            rec.expiry_date = row['expiry_date']
-            rec.phone_number = convert_phone_number(row['phone_number'])
-            saved = rec.save
+          ActiveRecord::Base.transaction do
+            csv_text = File.read(Rails.root.join('db', 'csv', "patient_records.csv"))
+            csv = CSV.parse(csv_text.scrub, headers: true)
+            csv.each do |row|
+              a = a + 1
+              rec = cl.find_or_initialize_by(id: row['id'])
+              rec.id = nil unless rec.persisted?
+              rec.last_name = row['last_name'].strip
+              rec.first_name = row['first_name'].strip
+              rec.dob = reformat_date(row['dob'])
+              # rec.dob = row['dob']
+              rec.member_id = row['member_id'].strip 
+              rec.effective_date = Date::strptime(row['effective_date'].gsub('-','/'),"%m/%d/%y").strftime('%F') unless row['effective_date'] == nil
+              rec.expiry_date = Date::strptime(row['expiry_date'].gsub('-','/'),"%m/%d/%y").strftime('%F') unless row['expiry_date'] == nil
+              rec.phone_number = convert_phone_number(row['phone_number'])
+              saved = rec.save
+            end
+          rescue StandardError => e
+             report.write("#{Time.now} Import Error...#{e} row number#{a}\n")        
           end
         end
-        puts "Import END"
+        report.write("#{Time.now}Import Ended...\n")
       end
 
       def  self.reformat_date(date)
         puts date
+        if (date == nil)
+          return
+        end
         cur_year =  Date.today.year.to_s
         date_split = Date._parse(date)
         new_year = ''
@@ -40,13 +50,11 @@ module Util
            date_split[:year] = new_year.to_i
           #  byebug
            date_split[:mday] = date[0].to_i
-           puts new_year
-           puts 'this'
-           puts date_split
-           puts Date.new(date_split[:year],date_split[:mon],date_split[:mday]).to_s
+
+          #  puts Date.new(date_split[:year],date_split[:mon],date_split[:mday]).to_s
         end
       
-        return "#{date[6..9]}-#{date[3..4]}-#{date[0..1]}"
+        return Date.new(date_split[:year],date_split[:mon],date_split[:mday]).to_s
       end
     
       def  self.convert_phone_number(_phone_number)

@@ -5279,3 +5279,1141 @@ Migrating to CreatePatientRecords (20210829215258)
   ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
   [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
   ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+Started GET "/app" for ::1 at 2021-09-06 11:36:40 -0600
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/app"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-09-06 11:36:41 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.8ms | Allocations: 196)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 950)
+
+
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (1.9ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", "AB 0000"], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 17:37:10.443541"], ["updated_at", "2021-09-06 17:37:10.443541"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["member_id", "349090"], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 17:37:10.449027"], ["updated_at", "2021-09-06 17:37:10.449027"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["member_id", "890887"], ["phone_number", "+13033339987"], ["created_at", "2021-09-06 17:37:10.452136"], ["updated_at", "2021-09-06 17:37:10.452136"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["member_id", "jkj3343"], ["effective_date", "0008-04-16"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-06 17:37:10.454764"], ["updated_at", "2021-09-06 17:37:10.454764"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["member_id", "349093"], ["phone_number", ""], ["created_at", "2021-09-06 17:37:10.457285"], ["updated_at", "2021-09-06 17:37:10.457285"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["member_id", "jk 909009"], ["effective_date", "0011-11-17"], ["phone_number", "+14445559876"], ["created_at", "2021-09-06 17:37:10.461162"], ["updated_at", "2021-09-06 17:37:10.461162"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["member_id", "349090"], ["phone_number", "+14445559877"], ["created_at", "2021-09-06 17:37:10.467573"], ["updated_at", "2021-09-06 17:37:10.467573"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["member_id", "uu 90990"], ["phone_number", "+14445559878"], ["created_at", "2021-09-06 17:37:10.475705"], ["updated_at", "2021-09-06 17:37:10.475705"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["member_id", "349097"], ["phone_number", "+14445559879"], ["created_at", "2021-09-06 17:37:10.482919"], ["updated_at", "2021-09-06 17:37:10.482919"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["member_id", "234324"], ["phone_number", "+14445559880"], ["created_at", "2021-09-06 17:37:10.490930"], ["updated_at", "2021-09-06 17:37:10.490930"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "0002-12-08"], ["member_id", "349099"], ["phone_number", "+16065559886"], ["created_at", "2021-09-06 17:37:10.497888"], ["updated_at", "2021-09-06 17:37:10.497888"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "0008-01-01"], ["member_id", "349100"], ["phone_number", "+12025559882"], ["created_at", "2021-09-06 17:37:10.508588"], ["updated_at", "2021-09-06 17:37:10.508588"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["member_id", "349101"], ["phone_number", "+14045559883"], ["created_at", "2021-09-06 17:37:10.511313"], ["updated_at", "2021-09-06 17:37:10.511313"]]
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:21:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:11:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/export.rb:8:in `block in export_class'
+  [1m[36mPatientRecord Load (0.5ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" ORDER BY "patient_records"."id" ASC[0m
+  ↳ app/models/patient_record.rb:7:in `block in to_csv'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/export.rb:6:in `export_class'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/export.rb:10:in `block in export_class'
+  [1m[36mPatientRecord Load (1.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" ORDER BY "patient_records"."id" ASC[0m
+  ↳ app/models/patient_record.rb:7:in `block in to_csv'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/export.rb:8:in `export_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/export.rb:10:in `block in export_class'
+  [1m[36mPatientRecord Load (1.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" ORDER BY "patient_records"."id" ASC[0m
+  ↳ app/models/patient_record.rb:7:in `block in to_csv'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/export.rb:8:in `export_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/export.rb:10:in `block in export_class'
+  [1m[36mPatientRecord Load (0.8ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" ORDER BY "patient_records"."id" ASC[0m
+  ↳ app/models/patient_record.rb:7:in `block in to_csv'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/export.rb:8:in `export_class'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (7752.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ImportFiles_development"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (89.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ImportFiles_development"[0m
+  [1m[35m (184.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ImportFiles_test"[0m
+  [1m[35m (3965.8ms)[0m  [1m[35mCREATE DATABASE "ImportFiles_development" ENCODING = 'unicode'[0m
+  [1m[35m (135.3ms)[0m  [1m[35mCREATE DATABASE "ImportFiles_test" ENCODING = 'unicode'[0m
+  [1m[35m (31.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(901516131079231185)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to PatientRecords (20210829211615)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "patient_records" ("id" bigserial primary key, "last_name" character varying, "first_name" character varying, "dob" date, "member_id" integer, "effective_date" date, "expiry_date" date, "phone_number" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210829211615"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePatientRecords (20210829215258)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "patient_records" ("id" bigserial primary key, "last_name" character varying, "first_name" character varying, "dob" date, "member_id" character varying, "effective_date" date, "expiry_date" date, "phone_number" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(901516131079231185)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/export.rb:10:in `block in export_class'
+  [1m[36mPatientRecord Load (0.6ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" ORDER BY "patient_records"."id" ASC[0m
+  ↳ app/models/patient_record.rb:7:in `block in to_csv'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/export.rb:8:in `export_class'
+  [1m[36mPatientRecord Load (0.7ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (46.0ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:05:44.197573"], ["updated_at", "2021-09-06 18:05:44.197573"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (20.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["member_id", 349090], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:05:44.267422"], ["updated_at", "2021-09-06 18:05:44.267422"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (31.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["member_id", 890887], ["phone_number", "+13033339987"], ["created_at", "2021-09-06 18:05:44.301876"], ["updated_at", "2021-09-06 18:05:44.301876"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.5ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["member_id", 0], ["effective_date", "0008-04-16"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-06 18:05:44.306137"], ["updated_at", "2021-09-06 18:05:44.306137"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["member_id", 349093], ["phone_number", ""], ["created_at", "2021-09-06 18:05:44.314167"], ["updated_at", "2021-09-06 18:05:44.314167"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["member_id", 0], ["effective_date", "0011-11-17"], ["phone_number", "+14445559876"], ["created_at", "2021-09-06 18:05:44.321201"], ["updated_at", "2021-09-06 18:05:44.321201"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["member_id", 349090], ["phone_number", "+14445559877"], ["created_at", "2021-09-06 18:05:44.334714"], ["updated_at", "2021-09-06 18:05:44.334714"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (46.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["member_id", 0], ["phone_number", "+14445559878"], ["created_at", "2021-09-06 18:05:44.390704"], ["updated_at", "2021-09-06 18:05:44.390704"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["member_id", 349097], ["phone_number", "+14445559879"], ["created_at", "2021-09-06 18:05:44.410317"], ["updated_at", "2021-09-06 18:05:44.410317"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.9ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["member_id", 234324], ["phone_number", "+14445559880"], ["created_at", "2021-09-06 18:05:44.421464"], ["updated_at", "2021-09-06 18:05:44.421464"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "0002-12-08"], ["member_id", 349099], ["phone_number", "+16065559886"], ["created_at", "2021-09-06 18:05:44.432789"], ["updated_at", "2021-09-06 18:05:44.432789"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "0008-01-01"], ["member_id", 349100], ["phone_number", "+12025559882"], ["created_at", "2021-09-06 18:05:44.448286"], ["updated_at", "2021-09-06 18:05:44.448286"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["member_id", 349101], ["phone_number", "+14045559883"], ["created_at", "2021-09-06 18:05:44.451774"], ["updated_at", "2021-09-06 18:05:44.451774"]]
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:23:in `block (2 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:13:in `block (2 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.7ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.5ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:10:10.948153"], ["updated_at", "2021-09-06 18:10:10.948153"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["member_id", 349090], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:10:10.951213"], ["updated_at", "2021-09-06 18:10:10.951213"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["member_id", 890887], ["phone_number", "+13033339987"], ["created_at", "2021-09-06 18:10:10.953770"], ["updated_at", "2021-09-06 18:10:10.953770"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["member_id", 0], ["effective_date", "0008-04-16"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-06 18:10:10.956084"], ["updated_at", "2021-09-06 18:10:10.956084"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["member_id", 349093], ["phone_number", ""], ["created_at", "2021-09-06 18:10:10.972550"], ["updated_at", "2021-09-06 18:10:10.972550"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["member_id", 0], ["effective_date", "0011-11-17"], ["phone_number", "+14445559876"], ["created_at", "2021-09-06 18:10:10.975648"], ["updated_at", "2021-09-06 18:10:10.975648"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["member_id", 349090], ["phone_number", "+14445559877"], ["created_at", "2021-09-06 18:10:10.978321"], ["updated_at", "2021-09-06 18:10:10.978321"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["member_id", 0], ["phone_number", "+14445559878"], ["created_at", "2021-09-06 18:10:10.981204"], ["updated_at", "2021-09-06 18:10:10.981204"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["member_id", 349097], ["phone_number", "+14445559879"], ["created_at", "2021-09-06 18:10:10.983613"], ["updated_at", "2021-09-06 18:10:10.983613"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["member_id", 234324], ["phone_number", "+14445559880"], ["created_at", "2021-09-06 18:10:10.986222"], ["updated_at", "2021-09-06 18:10:10.986222"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "0002-12-08"], ["member_id", 349099], ["phone_number", "+16065559886"], ["created_at", "2021-09-06 18:10:10.988705"], ["updated_at", "2021-09-06 18:10:10.988705"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "0008-01-01"], ["member_id", 349100], ["phone_number", "+12025559882"], ["created_at", "2021-09-06 18:10:10.991139"], ["updated_at", "2021-09-06 18:10:10.991139"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["member_id", 349101], ["phone_number", "+14045559883"], ["created_at", "2021-09-06 18:10:10.993242"], ["updated_at", "2021-09-06 18:10:10.993242"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:16:00.119171"], ["updated_at", "2021-09-06 18:16:00.119171"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:24:28.652879"], ["updated_at", "2021-09-06 18:24:28.652879"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["member_id", 349090], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:24:28.655430"], ["updated_at", "2021-09-06 18:24:28.655430"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["member_id", 890887], ["phone_number", "+13033339987"], ["created_at", "2021-09-06 18:24:28.657579"], ["updated_at", "2021-09-06 18:24:28.657579"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["member_id", 0], ["effective_date", "0008-04-16"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-06 18:24:28.659507"], ["updated_at", "2021-09-06 18:24:28.659507"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["member_id", 349093], ["phone_number", ""], ["created_at", "2021-09-06 18:24:28.674556"], ["updated_at", "2021-09-06 18:24:28.674556"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["member_id", 0], ["effective_date", "0011-11-17"], ["phone_number", "+14445559876"], ["created_at", "2021-09-06 18:24:28.676720"], ["updated_at", "2021-09-06 18:24:28.676720"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["member_id", 349090], ["phone_number", "+14445559877"], ["created_at", "2021-09-06 18:24:28.678691"], ["updated_at", "2021-09-06 18:24:28.678691"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["member_id", 0], ["phone_number", "+14445559878"], ["created_at", "2021-09-06 18:24:28.680692"], ["updated_at", "2021-09-06 18:24:28.680692"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["member_id", 349097], ["phone_number", "+14445559879"], ["created_at", "2021-09-06 18:24:28.682739"], ["updated_at", "2021-09-06 18:24:28.682739"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["member_id", 234324], ["phone_number", "+14445559880"], ["created_at", "2021-09-06 18:24:28.684766"], ["updated_at", "2021-09-06 18:24:28.684766"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "0002-12-08"], ["member_id", 349099], ["phone_number", "+16065559886"], ["created_at", "2021-09-06 18:24:28.686731"], ["updated_at", "2021-09-06 18:24:28.686731"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "0008-01-01"], ["member_id", 349100], ["phone_number", "+12025559882"], ["created_at", "2021-09-06 18:24:28.688811"], ["updated_at", "2021-09-06 18:24:28.688811"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["member_id", 349101], ["phone_number", "+14045559883"], ["created_at", "2021-09-06 18:24:28.690741"], ["updated_at", "2021-09-06 18:24:28.690741"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.8ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.5ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:27:49.904181"], ["updated_at", "2021-09-06 18:27:49.904181"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["member_id", 349090], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:27:49.907052"], ["updated_at", "2021-09-06 18:27:49.907052"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["member_id", 890887], ["phone_number", "+13033339987"], ["created_at", "2021-09-06 18:27:49.909378"], ["updated_at", "2021-09-06 18:27:49.909378"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["member_id", 0], ["effective_date", "0008-04-16"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-06 18:27:49.910997"], ["updated_at", "2021-09-06 18:27:49.910997"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["member_id", 349093], ["phone_number", ""], ["created_at", "2021-09-06 18:27:49.913082"], ["updated_at", "2021-09-06 18:27:49.913082"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (22.8ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["member_id", 0], ["effective_date", "0011-11-17"], ["phone_number", "+14445559876"], ["created_at", "2021-09-06 18:27:49.930217"], ["updated_at", "2021-09-06 18:27:49.930217"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["member_id", 349090], ["phone_number", "+14445559877"], ["created_at", "2021-09-06 18:27:49.955508"], ["updated_at", "2021-09-06 18:27:49.955508"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["member_id", 0], ["phone_number", "+14445559878"], ["created_at", "2021-09-06 18:27:49.958449"], ["updated_at", "2021-09-06 18:27:49.958449"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["member_id", 349097], ["phone_number", "+14445559879"], ["created_at", "2021-09-06 18:27:49.961495"], ["updated_at", "2021-09-06 18:27:49.961495"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["member_id", 234324], ["phone_number", "+14445559880"], ["created_at", "2021-09-06 18:27:49.964390"], ["updated_at", "2021-09-06 18:27:49.964390"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "0002-12-08"], ["member_id", 349099], ["phone_number", "+16065559886"], ["created_at", "2021-09-06 18:27:49.966429"], ["updated_at", "2021-09-06 18:27:49.966429"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "0008-01-01"], ["member_id", 349100], ["phone_number", "+12025559882"], ["created_at", "2021-09-06 18:27:49.968904"], ["updated_at", "2021-09-06 18:27:49.968904"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["member_id", 349101], ["phone_number", "+14045559883"], ["created_at", "2021-09-06 18:27:49.971441"], ["updated_at", "2021-09-06 18:27:49.971441"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[35m (117.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/export.rb:10:in `block in export_class'
+  [1m[36mPatientRecord Load (0.8ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" ORDER BY "patient_records"."id" ASC[0m
+  ↳ app/models/patient_record.rb:7:in `block in to_csv'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/export.rb:8:in `export_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:29:38.560265"], ["updated_at", "2021-09-06 18:29:38.560265"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["member_id", 349090], ["phone_number", "+13038873456"], ["created_at", "2021-09-06 18:29:38.562995"], ["updated_at", "2021-09-06 18:29:38.562995"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["member_id", 890887], ["phone_number", "+13033339987"], ["created_at", "2021-09-06 18:29:38.564865"], ["updated_at", "2021-09-06 18:29:38.564865"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (5.7ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["member_id", 0], ["effective_date", "0008-04-16"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 14:57:22.380886"], ["updated_at", "2021-09-07 14:57:22.380886"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["member_id", 349093], ["phone_number", ""], ["created_at", "2021-09-07 14:57:23.180482"], ["updated_at", "2021-09-07 14:57:23.180482"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["member_id", 0], ["effective_date", "0011-11-17"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 14:57:23.185570"], ["updated_at", "2021-09-07 14:57:23.185570"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["member_id", 349090], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 14:57:23.189799"], ["updated_at", "2021-09-07 14:57:23.189799"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["member_id", 0], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 14:57:23.193690"], ["updated_at", "2021-09-07 14:57:23.193690"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["member_id", 349097], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 14:57:23.944365"], ["updated_at", "2021-09-07 14:57:23.944365"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["member_id", 234324], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 14:57:24.600643"], ["updated_at", "2021-09-07 14:57:24.600643"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "0002-12-08"], ["member_id", 349099], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 14:57:24.603915"], ["updated_at", "2021-09-07 14:57:24.603915"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "0008-01-01"], ["member_id", 349100], ["phone_number", "+12025559882"], ["created_at", "2021-09-07 14:57:25.452423"], ["updated_at", "2021-09-07 14:57:25.452423"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["member_id", 349101], ["phone_number", "+14045559883"], ["created_at", "2021-09-07 14:57:25.789664"], ["updated_at", "2021-09-07 14:57:25.789664"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.5ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:03:56.149838"], ["updated_at", "2021-09-07 15:03:56.149838"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["member_id", 349090], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:03:56.152440"], ["updated_at", "2021-09-07 15:03:56.152440"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["member_id", 890887], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 15:03:56.154617"], ["updated_at", "2021-09-07 15:03:56.154617"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["member_id", 0], ["effective_date", "0008-04-16"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 15:04:30.582624"], ["updated_at", "2021-09-07 15:04:30.582624"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["member_id", 349093], ["phone_number", ""], ["created_at", "2021-09-07 15:04:41.897973"], ["updated_at", "2021-09-07 15:04:41.897973"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["member_id", 0], ["effective_date", "0011-11-17"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 15:04:41.900806"], ["updated_at", "2021-09-07 15:04:41.900806"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["member_id", 349090], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 15:04:41.903421"], ["updated_at", "2021-09-07 15:04:41.903421"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["member_id", 0], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 15:04:41.905847"], ["updated_at", "2021-09-07 15:04:41.905847"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["member_id", 349097], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 15:04:42.887718"], ["updated_at", "2021-09-07 15:04:42.887718"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["member_id", 234324], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 15:04:43.405002"], ["updated_at", "2021-09-07 15:04:43.405002"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "0002-12-08"], ["member_id", 349099], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 15:04:43.407704"], ["updated_at", "2021-09-07 15:04:43.407704"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "0008-01-01"], ["member_id", 349100], ["phone_number", "+12025559882"], ["created_at", "2021-09-07 15:04:43.990910"], ["updated_at", "2021-09-07 15:04:43.990910"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["member_id", 349101], ["phone_number", "+14045559883"], ["created_at", "2021-09-07 15:04:44.283799"], ["updated_at", "2021-09-07 15:04:44.283799"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.6ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:05:35.428212"], ["updated_at", "2021-09-07 15:05:35.428212"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["dob", "1988-01-01"], ["member_id", 349090], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:05:35.431153"], ["updated_at", "2021-09-07 15:05:35.431153"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["dob", "1966-02-02"], ["member_id", 890887], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 15:05:35.433408"], ["updated_at", "2021-09-07 15:05:35.433408"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["dob", "1999-06-06"], ["member_id", 0], ["effective_date", "0008-04-16"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 15:05:35.435684"], ["updated_at", "2021-09-07 15:05:35.435684"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["dob", "1988-04-01"], ["member_id", 349093], ["phone_number", ""], ["created_at", "2021-09-07 15:05:35.437913"], ["updated_at", "2021-09-07 15:05:35.437913"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["dob", "1948-04-04"], ["member_id", 0], ["effective_date", "0011-11-17"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 15:05:35.452445"], ["updated_at", "2021-09-07 15:05:35.452445"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["dob", "1988-06-01"], ["member_id", 349090], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 15:05:35.454592"], ["updated_at", "2021-09-07 15:05:35.454592"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["dob", "1988-07-01"], ["member_id", 0], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 15:05:35.456539"], ["updated_at", "2021-09-07 15:05:35.456539"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["dob", "1988-08-01"], ["member_id", 349097], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 15:05:35.458471"], ["updated_at", "2021-09-07 15:05:35.458471"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["dob", "1988-09-01"], ["member_id", 234324], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 15:05:35.460550"], ["updated_at", "2021-09-07 15:05:35.460550"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "1988-02-12"], ["member_id", 349099], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 15:05:35.462598"], ["updated_at", "2021-09-07 15:05:35.462598"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "1988-11-01"], ["member_id", 349100], ["phone_number", "+12025559882"], ["created_at", "2021-09-07 15:05:35.464577"], ["updated_at", "2021-09-07 15:05:35.464577"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["dob", "1988-12-01"], ["member_id", 349101], ["phone_number", "+14045559883"], ["created_at", "2021-09-07 15:05:35.466487"], ["updated_at", "2021-09-07 15:05:35.466487"]]
+  ↳ lib/util/import.rb:24:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:14:in `block (3 levels) in import_class'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:18:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.6ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:18:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.8ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.7ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.6ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.9ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.7ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.9ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.5ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.5ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (1.5ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:19:59.939607"], ["updated_at", "2021-09-07 15:19:59.939607"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.5ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.6ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:28:22.621020"], ["updated_at", "2021-09-07 15:28:22.621020"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["dob", "1988-01-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:28:22.624127"], ["updated_at", "2021-09-07 15:28:22.624127"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["dob", "1966-02-02"], ["member_id", 890887], ["effective_date", "2019-09-30"], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 15:28:22.626240"], ["updated_at", "2021-09-07 15:28:22.626240"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["dob", "1999-06-06"], ["member_id", 0], ["effective_date", "2016-08-04"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 15:28:22.628652"], ["updated_at", "2021-09-07 15:28:22.628652"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["dob", "1988-04-01"], ["member_id", 349093], ["effective_date", "2019-09-30"], ["phone_number", ""], ["created_at", "2021-09-07 15:28:22.644077"], ["updated_at", "2021-09-07 15:28:22.644077"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["dob", "1948-04-04"], ["member_id", 0], ["effective_date", "2017-11-11"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 15:28:22.646204"], ["updated_at", "2021-09-07 15:28:22.646204"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["dob", "1988-06-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 15:28:22.648348"], ["updated_at", "2021-09-07 15:28:22.648348"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["dob", "1988-07-01"], ["member_id", 0], ["effective_date", "2019-09-30"], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 15:28:22.650257"], ["updated_at", "2021-09-07 15:28:22.650257"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["dob", "1988-08-01"], ["member_id", 349097], ["effective_date", "2019-09-30"], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 15:28:22.652078"], ["updated_at", "2021-09-07 15:28:22.652078"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["dob", "1988-09-01"], ["member_id", 234324], ["effective_date", "2019-09-30"], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 15:28:22.653890"], ["updated_at", "2021-09-07 15:28:22.653890"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "1988-02-12"], ["member_id", 349099], ["effective_date", "2019-09-30"], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 15:28:22.655629"], ["updated_at", "2021-09-07 15:28:22.655629"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (1.0ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:28:42.978629"], ["updated_at", "2021-09-07 15:28:42.978629"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["dob", "1988-01-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:28:42.982162"], ["updated_at", "2021-09-07 15:28:42.982162"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["dob", "1966-02-02"], ["member_id", 890887], ["effective_date", "2019-09-30"], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 15:28:42.984176"], ["updated_at", "2021-09-07 15:28:42.984176"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["dob", "1999-06-06"], ["member_id", 0], ["effective_date", "2016-08-04"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 15:28:42.986153"], ["updated_at", "2021-09-07 15:28:42.986153"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["dob", "1988-04-01"], ["member_id", 349093], ["effective_date", "2019-09-30"], ["phone_number", ""], ["created_at", "2021-09-07 15:28:42.987987"], ["updated_at", "2021-09-07 15:28:42.987987"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["dob", "1948-04-04"], ["member_id", 0], ["effective_date", "2017-11-11"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 15:28:42.989872"], ["updated_at", "2021-09-07 15:28:42.989872"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["dob", "1988-06-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 15:28:42.991732"], ["updated_at", "2021-09-07 15:28:42.991732"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["dob", "1988-07-01"], ["member_id", 0], ["effective_date", "2019-09-30"], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 15:28:42.993456"], ["updated_at", "2021-09-07 15:28:42.993456"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["dob", "1988-08-01"], ["member_id", 349097], ["effective_date", "2019-09-30"], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 15:28:42.995826"], ["updated_at", "2021-09-07 15:28:42.995826"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["dob", "1988-09-01"], ["member_id", 234324], ["effective_date", "2019-09-30"], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 15:28:42.999919"], ["updated_at", "2021-09-07 15:28:42.999919"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "1988-02-12"], ["member_id", 349099], ["effective_date", "2019-09-30"], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 15:28:43.003776"], ["updated_at", "2021-09-07 15:28:43.003776"]]
+  ↳ lib/util/import.rb:28:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.5ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.6ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:29:57.808674"], ["updated_at", "2021-09-07 15:29:57.808674"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["dob", "1988-01-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:34:56.680412"], ["updated_at", "2021-09-07 15:34:56.680412"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["dob", "1966-02-02"], ["member_id", 890887], ["effective_date", "2019-09-30"], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 15:35:03.176177"], ["updated_at", "2021-09-07 15:35:03.176177"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.6ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["dob", "1999-06-06"], ["member_id", 0], ["effective_date", "2016-08-04"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 15:35:09.011981"], ["updated_at", "2021-09-07 15:35:09.011981"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.4ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["dob", "1988-04-01"], ["member_id", 349093], ["effective_date", "2019-09-30"], ["phone_number", ""], ["created_at", "2021-09-07 15:35:12.673420"], ["updated_at", "2021-09-07 15:35:12.673420"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["dob", "1948-04-04"], ["member_id", 0], ["effective_date", "2017-11-11"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 15:35:19.797390"], ["updated_at", "2021-09-07 15:35:19.797390"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["dob", "1988-06-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 15:35:20.315533"], ["updated_at", "2021-09-07 15:35:20.315533"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["dob", "1988-07-01"], ["member_id", 0], ["effective_date", "2019-09-30"], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 15:35:20.719385"], ["updated_at", "2021-09-07 15:35:20.719385"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["dob", "1988-08-01"], ["member_id", 349097], ["effective_date", "2019-09-30"], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 15:35:21.035369"], ["updated_at", "2021-09-07 15:35:21.035369"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["dob", "1988-09-01"], ["member_id", 234324], ["effective_date", "2019-09-30"], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 15:35:21.393700"], ["updated_at", "2021-09-07 15:35:21.393700"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "1988-02-12"], ["member_id", 349099], ["effective_date", "2019-09-30"], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 15:35:22.001742"], ["updated_at", "2021-09-07 15:35:22.001742"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.6ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.6ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:36:04.829946"], ["updated_at", "2021-09-07 15:36:04.829946"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["dob", "1988-01-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:36:06.223800"], ["updated_at", "2021-09-07 15:36:06.223800"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["dob", "1966-02-02"], ["member_id", 890887], ["effective_date", "2019-09-30"], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 15:36:07.147711"], ["updated_at", "2021-09-07 15:36:07.147711"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["dob", "1999-06-06"], ["member_id", 0], ["effective_date", "2016-08-04"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 15:36:08.157932"], ["updated_at", "2021-09-07 15:36:08.157932"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["dob", "1988-04-01"], ["member_id", 349093], ["effective_date", "2019-09-30"], ["phone_number", ""], ["created_at", "2021-09-07 15:36:11.510234"], ["updated_at", "2021-09-07 15:36:11.510234"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["dob", "1948-04-04"], ["member_id", 0], ["effective_date", "2017-11-11"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 15:36:12.590175"], ["updated_at", "2021-09-07 15:36:12.590175"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["dob", "1988-06-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 15:36:13.086257"], ["updated_at", "2021-09-07 15:36:13.086257"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["dob", "1988-07-01"], ["member_id", 0], ["effective_date", "2019-09-30"], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 15:36:13.467135"], ["updated_at", "2021-09-07 15:36:13.467135"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["dob", "1988-08-01"], ["member_id", 349097], ["effective_date", "2019-09-30"], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 15:36:13.827474"], ["updated_at", "2021-09-07 15:36:13.827474"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["dob", "1988-09-01"], ["member_id", 234324], ["effective_date", "2019-09-30"], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 15:36:14.232688"], ["updated_at", "2021-09-07 15:36:14.232688"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "1988-02-12"], ["member_id", 349099], ["effective_date", "2019-09-30"], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 15:36:14.908160"], ["updated_at", "2021-09-07 15:36:14.908160"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.5ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.6ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:40:05.913700"], ["updated_at", "2021-09-07 15:40:05.913700"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["dob", "1988-01-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:46:19.324617"], ["updated_at", "2021-09-07 15:46:19.324617"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["dob", "1966-02-02"], ["member_id", 890887], ["effective_date", "2019-09-30"], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 15:46:22.314966"], ["updated_at", "2021-09-07 15:46:22.314966"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["dob", "1999-06-06"], ["member_id", 0], ["effective_date", "2016-08-04"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 15:46:25.533196"], ["updated_at", "2021-09-07 15:46:25.533196"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["dob", "1988-04-01"], ["member_id", 349093], ["effective_date", "2019-09-30"], ["phone_number", ""], ["created_at", "2021-09-07 15:46:28.230933"], ["updated_at", "2021-09-07 15:46:28.230933"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["dob", "1948-04-04"], ["member_id", 0], ["effective_date", "2017-11-11"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 15:46:30.685333"], ["updated_at", "2021-09-07 15:46:30.685333"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["dob", "1988-06-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 15:46:33.856484"], ["updated_at", "2021-09-07 15:46:33.856484"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["dob", "1988-07-01"], ["member_id", 0], ["effective_date", "2019-09-30"], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 15:46:38.130319"], ["updated_at", "2021-09-07 15:46:38.130319"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["dob", "1988-08-01"], ["member_id", 349097], ["effective_date", "2019-09-30"], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 15:46:39.911488"], ["updated_at", "2021-09-07 15:46:39.911488"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["dob", "1988-09-01"], ["member_id", 234324], ["effective_date", "2019-09-30"], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 15:46:42.115034"], ["updated_at", "2021-09-07 15:46:42.115034"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "1988-02-12"], ["member_id", 349099], ["effective_date", "2019-09-30"], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 15:46:44.701763"], ["updated_at", "2021-09-07 15:46:44.701763"]]
+  ↳ lib/util/import.rb:29:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.8ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (4.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:49:35.247683"], ["updated_at", "2021-09-07 15:49:35.247683"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["dob", "1988-01-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 15:49:36.532849"], ["updated_at", "2021-09-07 15:49:36.532849"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.8ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["dob", "1966-02-02"], ["member_id", 890887], ["effective_date", "2019-09-30"], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 15:49:37.231063"], ["updated_at", "2021-09-07 15:49:37.231063"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["dob", "1999-06-06"], ["member_id", 0], ["effective_date", "2016-08-04"], ["expiry_date", "2050-12-12"], ["created_at", "2021-09-07 15:49:37.749381"], ["updated_at", "2021-09-07 15:49:37.749381"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["dob", "1988-04-01"], ["member_id", 349093], ["effective_date", "2019-09-30"], ["phone_number", ""], ["created_at", "2021-09-07 15:49:38.377680"], ["updated_at", "2021-09-07 15:49:38.377680"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["dob", "1948-04-04"], ["member_id", 0], ["effective_date", "2017-11-11"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 15:49:38.872318"], ["updated_at", "2021-09-07 15:49:38.872318"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["dob", "1988-06-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 15:49:39.344551"], ["updated_at", "2021-09-07 15:49:39.344551"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["dob", "1988-07-01"], ["member_id", 0], ["effective_date", "2019-09-30"], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 15:49:39.752096"], ["updated_at", "2021-09-07 15:49:39.752096"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["dob", "1988-08-01"], ["member_id", 349097], ["effective_date", "2019-09-30"], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 15:49:40.536860"], ["updated_at", "2021-09-07 15:49:40.536860"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["dob", "1988-09-01"], ["member_id", 234324], ["effective_date", "2019-09-30"], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 15:49:40.898154"], ["updated_at", "2021-09-07 15:49:40.898154"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "1988-02-12"], ["member_id", 349099], ["effective_date", "2019-09-30"], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 15:49:41.213096"], ["updated_at", "2021-09-07 15:49:41.213096"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "1988-11-01"], ["member_id", 349100], ["effective_date", "2019-09-30"], ["phone_number", "+12025559882"], ["created_at", "2021-09-07 15:49:41.505653"], ["updated_at", "2021-09-07 15:49:41.505653"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["dob", "1988-12-01"], ["member_id", 349101], ["effective_date", "2019-09-30"], ["phone_number", "+14045559883"], ["created_at", "2021-09-07 15:49:41.775024"], ["updated_at", "2021-09-07 15:49:41.775024"]]
+  ↳ lib/util/import.rb:26:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.8ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["last_name", "Bateman"], ["first_name", "Jason"], ["dob", "2010-12-12"], ["member_id", 0], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 16:13:50.656859"], ["updated_at", "2021-09-07 16:13:50.656859"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["last_name", "Wilson"], ["first_name", "Brent"], ["dob", "1988-01-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["expiry_date", "2020-09-30"], ["phone_number", "+13038873456"], ["created_at", "2021-09-07 16:13:50.659640"], ["updated_at", "2021-09-07 16:13:50.659640"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["last_name", "Brown"], ["first_name", "Antonio"], ["dob", "1966-02-02"], ["member_id", 890887], ["effective_date", "2019-09-30"], ["expiry_date", "2020-09-30"], ["phone_number", "+13033339987"], ["created_at", "2021-09-07 16:13:50.661271"], ["updated_at", "2021-09-07 16:13:50.661271"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Jones"], ["first_name", "Jerry"], ["dob", "1999-06-06"], ["member_id", 0], ["effective_date", "2016-08-04"], ["expiry_date", "2020-12-12"], ["created_at", "2021-09-07 16:13:50.662769"], ["updated_at", "2021-09-07 16:13:50.662769"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["last_name", "Mayfield"], ["first_name", "Baker"], ["dob", "1988-04-01"], ["member_id", 349093], ["effective_date", "2019-09-30"], ["expiry_date", "2020-12-13"], ["phone_number", ""], ["created_at", "2021-09-07 16:13:50.664509"], ["updated_at", "2021-09-07 16:13:50.664509"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.2ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["last_name", "Williams"], ["first_name", "Serena"], ["dob", "1948-04-04"], ["member_id", 0], ["effective_date", "2017-11-11"], ["expiry_date", "2020-12-14"], ["phone_number", "+14445559876"], ["created_at", "2021-09-07 16:13:50.676920"], ["updated_at", "2021-09-07 16:13:50.676920"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["last_name", "Jabs"], ["first_name", "Jake"], ["dob", "1988-06-01"], ["member_id", 349090], ["effective_date", "2019-09-30"], ["expiry_date", "2050-12-15"], ["phone_number", "+14445559877"], ["created_at", "2021-09-07 16:13:50.678448"], ["updated_at", "2021-09-07 16:13:50.678448"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["last_name", "Poppins"], ["first_name", "Mary"], ["dob", "1988-07-01"], ["member_id", 0], ["effective_date", "2019-09-30"], ["expiry_date", "2050-12-16"], ["phone_number", "+14445559878"], ["created_at", "2021-09-07 16:13:50.679872"], ["updated_at", "2021-09-07 16:13:50.679872"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.2ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "expiry_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["last_name", "Jesse Rephael"], ["first_name", "Sally"], ["dob", "1988-08-01"], ["member_id", 349097], ["effective_date", "2019-09-30"], ["expiry_date", "2050-12-17"], ["phone_number", "+14445559879"], ["created_at", "2021-09-07 16:13:50.681329"], ["updated_at", "2021-09-07 16:13:50.681329"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Springsteen"], ["first_name", "Bruce"], ["dob", "1988-09-01"], ["member_id", 234324], ["effective_date", "2019-09-30"], ["phone_number", "+14445559880"], ["created_at", "2021-09-07 16:13:50.682781"], ["updated_at", "2021-09-07 16:13:50.682781"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Statham"], ["first_name", "Jason"], ["dob", "1988-02-12"], ["member_id", 349099], ["effective_date", "2019-09-30"], ["phone_number", "+16065559886"], ["created_at", "2021-09-07 16:13:50.684222"], ["updated_at", "2021-09-07 16:13:50.684222"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Bruce"], ["first_name", "Lenny"], ["dob", "1988-11-01"], ["member_id", 349100], ["effective_date", "2019-09-30"], ["phone_number", "+12025559882"], ["created_at", "2021-09-07 16:13:50.685645"], ["updated_at", "2021-09-07 16:13:50.685645"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Create (0.1ms)[0m  [1m[32mINSERT INTO "patient_records" ("last_name", "first_name", "dob", "member_id", "effective_date", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["last_name", "Short"], ["first_name", "Martin"], ["dob", "1988-12-01"], ["member_id", 349101], ["effective_date", "2019-09-30"], ["phone_number", "+14045559883"], ["created_at", "2021-09-07 16:13:50.687078"], ["updated_at", "2021-09-07 16:13:50.687078"]]
+  ↳ lib/util/import.rb:25:in `block (3 levels) in import_class'
+  [1m[36mPatientRecord Load (0.1ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" WHERE "patient_records"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/util/import.rb:15:in `block (3 levels) in import_class'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/import.rb:10:in `block in import_class'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/patient_record.rb:7:in `block in to_csv'
+  [1m[36mPatientRecord Load (0.3ms)[0m  [1m[34mSELECT "patient_records".* FROM "patient_records" ORDER BY "patient_records"."id" ASC[0m
+  ↳ app/models/patient_record.rb:7:in `block in to_csv'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/util/export.rb:8:in `export_class'
